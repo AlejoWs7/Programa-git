@@ -1,0 +1,177 @@
+* {
+  /* esto se usa para ajustar la relacion de aspecto con respeto al dispositivo */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cabecera {
+  text-align: center;
+  font-weight: 12px;
+  font-size: 22px;
+  border-top: -50 px;
+}
+/* cuerpo estilo general de el cuerpo, en esta segunda parte se trabaja mayormente el fondo */
+body {
+  background-image: url(../imagenes/Login\ y\ Registro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.contenedor_estructura {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.sombra_posterior {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(152, 53, 3, 0.307);
+  border-radius: 18px;
+}
+
+.sombra_posterior div {
+  margin: 100px 40px;
+  color: white;
+  transition: all 500ms;
+}
+
+.sombra_posterior div p,
+.sombra_posterior div button {
+  margin-top: 30px;
+}
+
+.sombra_posterior div h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+/* botones de ingreso y login  */
+.sombra_posterior button {
+  padding: 10px 40px;
+  border: 2px;
+  /*  redondeo */
+  border-radius: 8px;
+  /* transparencia para que se vea super */
+  opacity: 77%;
+  /* el color de la paleta de colores de mi empresa */
+  background-color: #e57d57;
+  /* tamaño de la fuente, le da un toque mas minimalista */
+  font-size: 14px;
+  /* ancho maximo, este se acerca a el bold pero aun es algo distinto*/
+  font-weight: 600;
+  /*  logra que al pasar el cursor se muestre en modo de seleccion */
+  cursor: pointer;
+  /*  elimina las lineas negras al exterior de el boton cuando se selecciona  */
+  outline: none;
+  /* tiempo maximo de la animacion para los cambios que se haran a continuacion la idea es animar los botones */
+  transition: all 508ms;
+}
+/* color al que elegi cambiar la fuente y el fondo al momento de sobre pasar el click, casi me vuelvo loco por no saber que me faltaba un hover */
+.sombra_posterior button:hover {
+  background: rgba(245, 245, 220, 0.515);
+  color: #ee4e14;
+}
+
+/*  pasamos a los campos o formularios */
+.contenedor_login-resgister {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+  transition: left 480ms cubic-bezier(0.185, 0.885, 0.32, 1.275);
+}
+/* paleta de colores y ajustes a todos los formularios */
+.contenedor_login-resgister form {
+  width: 100%;
+  padding: 80px 20px;
+  background: rgba(245, 245, 220, 0.588);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  border-radius: 20px;
+}
+/* se cambia tmaño de fuente, el texto se mantiene en el centro y se da el espacio de el fondo ademas de el color (solo se toco el h2) */
+.contenedor_login-resgister form h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ee4e14;
+}
+/* aca se estan tocando solamente los campos donde ingresa informacion de los formularios */
+.contenedor_login-resgister form input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+/* se cambian los botones y se les da effecto al hacer hover con el mouse */
+.contenedor_login-resgister form button {
+  padding: 10px 40px;
+  margin-top: 40px;
+  border: none;
+  font-size: 14px;
+  background: #e57d57;
+  color: beige;
+  cursor: pointer;
+  outline: none;
+}
+/* clase para que se vea o no el formulario de login y registro, mi idea es en base a un video hacer que el codigo cambie al hacer click por medio de phyton */
+.formulario-login {
+  opacity: 1;
+  display: block;
+}
+
+.formulario-register {
+  display: none;
+}
+
+/* responsive Desing */
+@media screen and (max-width: 850px) {
+  main {
+    margin-top: 50px;
+  }
+
+  .sombra_posterior {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+  }
+  .sombra_posterior div {
+    margin: 0px;
+    position: absolute;
+  }
+  /* a continuacion se valida el diseño responsive de los formularios */
+
+  .contenedor_login-resgister {
+    top: -10px;
+    left: -5px;
+    margin: auto;
+  }
+
+  .contenedor_login-resgister form {
+    position: relative;
+  }
+  

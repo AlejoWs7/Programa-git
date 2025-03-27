@@ -1,6 +1,22 @@
+<?php
+session_start();
+if(!isset($_SESSION['usuario'])){
+  echo' 
+  <script> alert("debes iniciar seccion para poder acceder a la tienda");
+  window.location = "http://localhost/1.0%20Web%20Shop/Login%20Y%20Registro/Assets/Ingreso%20General.php";
+  </script>
+  '; 
+  session_destroy();
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebShopEmporium2</title>
